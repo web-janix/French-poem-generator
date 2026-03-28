@@ -7,43 +7,46 @@
     <title>AI French Poem Generator</title>
   </head>
   <body>
-    <header>
-      <h1>AI French Poem Generator</h1>
-    </header>
-    <main>
-      <form>
-        <input
-          type="text"
-          id="input"
-          placeholder="Enter a theme for your poem (e.g. love, nature, etc.)"
-          autofocus
-          required
-          autocorrect="off"
-        />
-        <button type="submit" id="generate-btn">Generate Poem</button>
-      </form>
-      <div>
-        La tombe dit à la rose
-        <br />
-        Des pleurs dont l'aube t'arrose
-      </div>
-    </main>
+    <div id="container">
+      <header>
+        <h1>AI French Poem Generator</h1>
+      </header>
+      <main>
+        <form>
+          <input
+            type="text"
+            id="input"
+            placeholder="Enter a theme for your poem (e.g. love, nature, etc.)"
+            autofocus
+            required
+            autocorrect="off"
+            class="prompt"
+          />
+          <button type="submit" class="generate-btn">Generate Poem</button>
+        </form>
+        <div class="poem">
+          La tombe dit à la rose
+          <br />
+          Des pleurs dont l'aube t'arrose
+        </div>
+      </main>
 
-    <footer>
-      This AI project was coded by
-      <a href="https://github.com/web-janix" target="_blank"
-        >Abigail Crafford</a
-      >
-      and is open sourced on
-      <a
-        href="https://github.com/web-janix/French-poem-generator"
-        target="_blank"
-      >
-        Github</a
-      >
-      and is and is hosted on
-      <a href="https://ai-french.netlify.app/" target="_blank"> Netlify</a>.
-    </footer>
+      <footer>
+        This AI project was coded by
+        <a href="https://github.com/web-janix" target="_blank"
+          >Abigail Crafford</a
+        >
+        and is open sourced on
+        <a
+          href="https://github.com/web-janix/French-poem-generator"
+          target="_blank"
+        >
+          Github</a
+        >
+        and is and is hosted on
+        <a href="https://ai-french.netlify.app/" target="_blank"> Netlify</a>.
+      </footer>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>
