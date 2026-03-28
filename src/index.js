@@ -1,8 +1,8 @@
 function generatePoem(event) {
-  event.preventDafault();
+  event.preventDefault();
 
   new Typewriter("#poem", {
-    strings: ["La tombe dit à la rose"],
+    strings: "La tombe dit à la rose",
     autoStart: true,
     delay: 1,
     cursor: "",
