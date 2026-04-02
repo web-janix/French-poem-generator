@@ -1,6 +1,9 @@
 function displayPoem(response) {
   console.log("poem generated");
-  let poem = response.data.answer.replace(/```html?/g, "").replace(/```/g, "").trim();
+  let poem = response.data.answer
+    .replace(/```html?/g, "")
+    .replace(/```/g, "")
+    .trim();
   new Typewriter("#poem", {
     strings: poem,
     autoStart: true,
@@ -21,7 +24,12 @@ function generatePoem(event) {
 
   let poemElement = document.querySelector("#poem");
   poemElement.classList.remove("hidden");
-  poemElement.innerHTML = `<div class="generating">⏳ Generating a French poem about ${instructionsInput.value}</div>`;
+  poemElement.innerHTML = `<div class="generating">Generating a French poem about ${instructionsInput.value}</div>`;
+  //poemElement.style.display = "block";
+
+  console.log("Generating poem...");
+  console.log("Prompt: ${prompt}");
+  console.log("Context: ${context}");
 
   axios.get(apiURL).then(displayPoem);
 }
